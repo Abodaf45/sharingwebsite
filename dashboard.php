@@ -1,6 +1,6 @@
 <?php
-include 'includes/session.php';
-include 'includes/db.php';
+include 'session.php';
+include 'db.php';
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
     }
 }
 
-include 'templates/header.php';
+include 'header.php';
 
 $stmt = $mysqli->prepare("SELECT * FROM files WHERE user_id = ?");
 $stmt->bind_param("i", $_SESSION['user_id']);
@@ -44,4 +44,4 @@ $result = $stmt->get_result();
     <?php endwhile; ?>
 </ul>
 
-<?php include 'templates/footer.php'; ?>
+<?php include 'footer.php'; ?>
