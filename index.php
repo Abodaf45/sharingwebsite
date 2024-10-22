@@ -1,6 +1,6 @@
 <?php
-include 'includes/session.php';
-include 'templates/header.php';
+include 'session.php';
+include 'header.php';
 ?>
 
 <div class="jumbotron text-center">
@@ -12,4 +12,4 @@ include 'templates/header.php';
     <a class="btn btn-secondary btn-lg" href="login.php" role="button">Login</a>
 </div>
 
-<?php include 'templates/footer.php'; ?>
+<?php include 'footer.php'; ?>
