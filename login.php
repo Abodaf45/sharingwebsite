@@ -1,6 +1,6 @@
 <?php
-include 'includes/session.php';
-include 'includes/db.php';
+include 'session.php';
+include 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-include 'templates/header.php';
+include 'header.php';
 ?>
 
 <form method="POST" action="">
@@ -47,4 +47,4 @@ include 'templates/header.php';
     <button type="submit" class="btn btn-primary">Login</button>
 </form>
 
-<?php include 'templates/footer.php'; ?>
+<?php include 'footer.php'; ?>
