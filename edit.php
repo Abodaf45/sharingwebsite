@@ -1,6 +1,6 @@
 <?php
-include 'includes/session.php';
-include 'includes/db.php';
+include 'session.php';
+include 'db.php';
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
     }
 }
 
-include 'templates/header.php';
+include 'header.php';
 ?>
 
 <h1>Edit File: <?= $file['filename'] ?></h1>
@@ -39,4 +39,4 @@ include 'templates/header.php';
     <button type="submit" class="btn btn-primary">Save Changes</button>
 </form>
 
-<?php include 'templates/footer.php'; ?>
+<?php include 'footer.php'; ?>
