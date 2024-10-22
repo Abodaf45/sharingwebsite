@@ -1,6 +1,6 @@
 <?php
-include 'includes/session.php';
-include 'includes/db.php';
+include 'session.php';
+include 'db.php';
 
 // Check if the user is logged in and is an admin
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
@@ -74,7 +74,7 @@ $stmt_files = $mysqli->prepare("SELECT files.*, users.username FROM files JOIN u
 $stmt_files->execute();
 $files_result = $stmt_files->get_result();
 
-include 'templates/header.php';
+include 'header.php';
 ?>
 
 <!-- Bootstrap CSS -->
@@ -219,7 +219,7 @@ $users_result = $stmt->get_result();
     </tbody>
 </table>
   
-<?php include 'templates/footer.php'; ?>
+<?php include 'footer.php'; ?>
 
  
 
